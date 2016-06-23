@@ -1,0 +1,17 @@
+* {
+	font: normal 16px Arial;
+	color: #009!important;
+}
+.inputField{
+	width: 300px;
+}
+form {
+	padding-left:50px;
+}
+.navJumbo {
+	padding-bottom:0px;
+	background-color:white;
+}
+button {
+	background-color: #fd6400!important;
+}
