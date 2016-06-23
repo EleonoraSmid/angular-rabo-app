@@ -1,10 +1,6 @@
 (function(){
-	angular.module('header-component', [])
+	angular.module('header', [])
 	.component('headerComponent', {
 		templateUrl: 'js/rabobank-calculator/header/header.html'
-	}).controller('navController', [function(){
-		this.buttonClick = function() {
-			console.log('hey')
-		}
-	}])
+	})
 })()
