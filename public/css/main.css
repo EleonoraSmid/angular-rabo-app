@@ -15,6 +15,9 @@ form {
 .pRight {
 	padding-top:8px;
 }
+.divConditions {
+	padding-right: 10px!important;
+}
 button {
 	background-color: #fd6400!important;
 }
