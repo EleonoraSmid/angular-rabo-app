@@ -12,8 +12,11 @@
 		vm.getDisabled = true
 
 		vm.checkDisabled = function() {
-			console.log(typeof vm.bedragOne)
-			vm.getDisabled = false
+			if(!isNaN(vm.bedrag1) && !isNaN(vm.bedrag2)){
+				vm.getDisabled = false
+			} else {
+				vm.getDisabled = true
+			}
 		}
 		
 		vm.buttonClick = function(){

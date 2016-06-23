@@ -12,7 +12,11 @@
 		vm.getDisabled = true
 
 		vm.checkDisabled = function() {
-			vm.getDisabled = false
+			if(!isNaN(vm.bedragOne)){
+				vm.getDisabled = false
+			} else {
+				vm.getDisabled = true
+			}
 		}
 		
 		BerekenMaandlastService.berekenMaandLast(vm.bedrag1)
