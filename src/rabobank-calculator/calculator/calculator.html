@@ -2,12 +2,12 @@
   <label for="persoon1">Uw inkomsten</label>
   <div class="form-group row">
     <input type="number" class="form-control inputField col-md-4" id="persoon1" ng-model="ctrl.bedrag1" ng-keypress="ctrl.checkDisabled()"  class="col-md-4" required>
-    <p class="col-md-4">euro per jaar </p>
+    <p class="col-md-4 pRight">euro per jaar </p>
   </div>
   <label for="persoon2">Partner inkomsten</label>
   <div class="form-group row">
     <input type="number" class="form-control inputField col-md-4" id="ctrl.persoon2" ng-model="ctrl.bedrag2" ng-keypress="ctrl.checkDisabled()" required>
-    <p class="col-md-4">euro per jaar</p>
+    <p class="col-md-4 pRight">euro per jaar</p>
   </div>
   <div class="form-group row">
   <button type="submit" class="btn btn-default" ng-disabled="ctrl.getDisabled">Bereken maximale hypotheek</button>
