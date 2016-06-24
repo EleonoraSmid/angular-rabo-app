@@ -1,16 +1,22 @@
-<form ng-submit="ctrl.buttonClick()">
-  <label for="persoon1">Uw inkomsten</label>
+<div class="row" ng-class="ctrl.addClass">
+<div >
+<form name="calculatorForm" ng-submit="ctrl.buttonClick()" >
+  <label for="persoon1">Uw inkomsten:</label>
+  <div>
+    <rzslider rz-slider-model="ctrl.bedrag1.value"
+          rz-slider-options="ctrl.bedrag1.options"></rzslider>
+</div>
+  <label for="persoon2">Partner inkomsten:</label>
+  <div>
+    <rzslider rz-slider-model="ctrl.bedrag2.value"
+          rz-slider-options="ctrl.bedrag2.options"></rzslider>
+</div>
   <div class="form-group row">
-    <input type="number" class="form-control inputField col-md-4" id="persoon1" ng-model="ctrl.bedrag1" ng-change="ctrl.checkDisabled()"  class="col-md-4" required>
-    <p class="col-md-4 pRight">euro per jaar </p>
+  <button type="submit" class="btn btn-default buttonClass" ng-disabled="ctrl.checkDisabled()">Bereken maximale hypotheek</button>
   </div>
-  <label for="persoon2">Partner inkomsten</label>
-  <div class="form-group row">
-    <input type="number" class="form-control inputField col-md-4" id="ctrl.persoon2" ng-model="ctrl.bedrag2" ng-change="ctrl.checkDisabled()" required>
-    <p class="col-md-4 pRight">euro per jaar</p>
-  </div>
-  <div class="form-group row">
-  <button type="submit" class="btn btn-default" ng-disabled="ctrl.getDisabled">Bereken maximale hypotheek</button>
-  </div>
-  <p>{{ctrl.maxBijlenenText }}{{ctrl.totaalBedrag | currency:"€"}}</p>
+  <p>{{ctrl.maxBijlenenText }}{{ctrl.totaalBedrag | calculateEuro:'€':true}}</p>
 </form>
+</div>
+</div>
+<!-- 
+ng-class="{'animated fadeInLeft': ctrl.bedrag1}" -->

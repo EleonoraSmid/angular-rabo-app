@@ -3,29 +3,32 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rabobank | Mortgage Calculator</title>
-
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="/js/angular/slider/dist/rzslider.css"/>
 </head>
 <body data-ng-app="app">
 
-
-<rabo-main-component> </rabo-main-component> 
+<div class="container">
+    <rabo-main-component> </rabo-main-component> 
+</div>
 
 </body>
-
+   
     <script src="angular/angular.js"></script>
     <script type="text/javascript" src="angular-route/angular-route.js"></script>
     <script type="text/javascript" src="js/angular/angular-component-router.js"></script>
     <script src="js/bootstrap/ui-bootstrap-tpls-1.3.3.min.js"></script>
-    <script type="text/javascript" src="js/angular/angular-locale_nl-nl.js"></script>
-    <link rel="stylesheet" type="text/css" href="/js/slider/rzslider.css"/>
-    <script src="/js/slider/rzslider.min.js"></script>
+    <script src="/js/angular/slider/dist/rzslider.min.js"></script>
 
     <script src="js/app.js"></script>
     <script src="js/app.config.js"></script>
 
     <script type="text/javascript" src="js/rabobank-calculator/components/components-module.js"></script>
+    <script type="text/javascript" src="js/rabobank-calculator/components/slide-left.js"></script>
+    <script type="text/javascript" src="js/rabobank-calculator/components/calculate-euro.js"></script>
+    <script type="text/javascript" src="js/rabobank-calculator/components/gezamelijk-inkomen.js"></script>
     <script type="text/javascript" src="js/rabobank-calculator/components/bereken-max-hypo-service.js"></script>
     <script type="text/javascript" src="js/rabobank-calculator/components/bereken-maandlast.js"></script>
     <script type="text/javascript" src="js/rabobank-calculator/header/header-module.js"></script>

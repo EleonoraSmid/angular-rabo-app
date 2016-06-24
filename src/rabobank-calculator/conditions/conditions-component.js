@@ -3,10 +3,12 @@
 	angular.module('conditions', [])
 	.component('conditions', {
 		templateUrl: 'js/rabobank-calculator/conditions/conditions.html',
-		controller: [ConditionsController]
+		controller: ['slideLeft', ConditionsController],
+		controllerAs: 'ctrl'
 	})
 
-	function ConditionsController() {
+	function ConditionsController(slideLeft) {
 		var vm = this
+		vm.addClass = slideLeft.getClass()
 	}
 })()

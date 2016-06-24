@@ -1,22 +1,28 @@
 @media only screen 
-  and (max-device-width: 1024px)
+  and (max-device-width: 990px)
   and (-webkit-min-device-pixel-ratio: 2){
  	.imgHeaderLeft {
 		background-image: url('../img/rabobank-logo-mobile.png')!important;
-		height:50px!important;
-		width:80px!important;
-		margin-top:-30px!important;
+		height:60px!important;
+		width:100px!important;
+		margin-left:43%!important;
   	}
+  	form {
+  		margin-left:30%!important;
+  	}
+  	.inputField{
+		width: 58%!important;
+	}
 }
 * {
-	font: normal 16px Arial;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif!important;
 	color: #009!important;
 }
-form {
-	padding-left:50px;
+.buttonClass {
+	background-color: #fd6400;
 }
-button {
-	background-color: #fd6400!important;
+form > label {
+	margin-left:-15px;
 }
 .inputField{
 	width: 300px;
@@ -41,4 +47,6 @@ button {
 .divConditions {
 	padding-right: 10px!important;
 }
-
+.activeThis{
+	color:black!important;
+}

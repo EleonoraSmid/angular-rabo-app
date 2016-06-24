@@ -1,5 +1,5 @@
 (function() {
 
-angular.module('app', ['ui.bootstrap', 'rabobank-calculator', 'ngComponentRouter'])
+angular.module('app', ['rabobank-calculator', 'ngComponentRouter'])
 
-})()
+})();
