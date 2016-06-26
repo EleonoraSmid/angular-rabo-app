@@ -10,8 +10,12 @@
 		var vm = this
 		vm.buttonClick = function(){
 			var thing = slideLeft.setStatus
-			slideLeft.putClass('animated fadeInLeft')
-			
+			slideLeft.putClass('animated fadeInRight')
+		}
+		vm.mouseOver = function(){
+			console.log('hey')
+			vm.addBounce = 'animated bounce'
+			console.log(vm.addBounce.className)
 		}
 	}
 })()

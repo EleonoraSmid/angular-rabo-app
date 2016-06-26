@@ -11,13 +11,13 @@
 	</div>
 	<div class="btn-group btn-group-justified" role="group" aria-label="..." >
 		<div class="btn-group" role="group" >
-			<button type="button" class="btn btn-default buttonClass" ng-link="['Calculator']" ng-click="ctrl.buttonClick()">Calculator</button>
+			<button type="button" class="btn btn-default buttonClass" ng-mouseover="ctrl.mouseOver()" ng-link="['Calculator']" ng-click="ctrl.buttonClick()"><div ng-class="ctrl.addBounce">Calculator</div></button>
 		</div>
 		<div class="btn-group" role="group" >
-			<button type="button" class="btn btn-default buttonClass" ng-link="['Rente']" ng-click="ctrl.buttonClick()">Actuele rente</button>
+			<button type="button" class="btn btn-default buttonClass" ng-link="['Rente']" ng-click="ctrl.buttonClick()" ng-mouseover="ctrl.mouseOver()" ng-class="ctrl.addBounce">Actuele rente</button>
 		</div>
 		<div class="btn-group" role="group" >
-			<button type="button" class="btn btn-default buttonClass" ng-link="['Voorwaarden']" ng-click="ctrl.buttonClick()">Voorwaarden</button>
-		</div>			
+			<button type="button" class="btn btn-default buttonClass" ng-link="['Voorwaarden']" ng-mouseover="ctrl.mouseOver()" ng-click="ctrl.buttonClick()" ng-class="ctrl.addBounce">Voorwaarden</button>
+		</div>
 	</div>
 </header>
