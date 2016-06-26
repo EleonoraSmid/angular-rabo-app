@@ -1,22 +1,18 @@
-@media only screen
-  and (max-device-width: 990px)
-  and (-webkit-min-device-pixel-ratio: 2){
- 	.imgHeaderLeft {
-		background-image: url('../img/rabobank-logo-mobile.png')!important;
-		height:60px!important;
-		width:100px!important;
-		margin-left:43%!important;
+
+@media (max-width: 900px) {
+	 	.imgHeaderLeft {
+		background-image: url('../img/rabobank-logo-mobile.png');
+		background-repeat: no-repeat;
+		height:60px;
+		width:100px;
   	}
-  	form {
-  		margin-left:30%!important;
-  	}
-  	.inputField{
-		width: 58%!important;
-	}
 }
 * {
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif!important;
 	color: #009!important;
+}
+label, button, div{
+	font-size: small;
 }
 .btn:focus {
  outline:0;
@@ -54,15 +50,19 @@ form > label {
 .inputField{
 	width: 300px;
 }
+input:focus{
+  box-shadow: 0 0 5px rgba(255, 153, 102, 1)!important;
+}
+@media (min-width: 900px) {
 .imgHeaderLeft {
 	background-image: url('../img/rabobank-logo.png');
 	background-repeat: no-repeat;
-	height:100px;
+	height:120px;
 	width:100px;
-	background-position: right top;
-    background-size: 100% 100%;
+    background-size: 100% auto;
     margin-left:10px;
 	margin-top: 0px;
+}
 }
 .navJumbo {
 	padding-bottom:0px;

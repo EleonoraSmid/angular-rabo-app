@@ -3,11 +3,12 @@
 <form name="intrestForm" ng-submit="ctrl.buttonClick()">
   <div class="form-group row">
     <h4><strong>Actuele hypotheekrente: {{ctrl.maxLast}}% voor 10 jaar.</strong></h4>
-  <div>
   <label>Uw gezamelijke inkomsten:</label>
+  <div class="form-group">
     <rzslider rz-slider-model="ctrl.bedragOne.value"
           rz-slider-options="ctrl.bedragOne.options"></rzslider>
-</div>
+  </div>
+  <input type="number" name="gezamelijkinkomen" ng-model="ctrl.bedragOne.value">
   </div>
   <div class="form-group row">
   <button type="submit" class="btn btn-default buttonClass" ng-disabled="ctrl.checkDisabled()">Bereken bruto maandlast</button>

@@ -2,20 +2,30 @@
 	angular.module('header', [])
 	.component('headerComponent', {
 		templateUrl: 'js/rabobank-calculator/header/header.html',
-		controller: ['slideLeft', headerController],
+		controller: ['slideLeft', 'bounce', headerController],
 		controllerAs: 'ctrl'
 	})
 
-	function headerController(slideLeft){
+	function headerController(slideLeft, bounce){
 		var vm = this
 		vm.buttonClick = function(){
-			var thing = slideLeft.setStatus
 			slideLeft.putClass('animated fadeInRight')
 		}
-		vm.mouseOver = function(){
-			console.log('hey')
-			vm.addBounce = 'animated bounce'
-			console.log(vm.addBounce.className)
+		vm.mouseOver = function(event){
+			console.log(event.target.id)
+			bounce.putClass('animated bounce')
+			if(event.target.id === 'buttonNavOne') {
+				vm.addBounceOne = bounce.getClass()
+			} else if (event.target.id === 'buttonNavTwo') {
+				vm.addBounceTwo = bounce.getClass()
+			} else if (event.target.id === 'buttonNavThree') {
+				vm.addBounceThree = bounce.getClass()
+			}
+		}
+		vm.mouseLeave = function(){
+			vm.addBounceOne = ''
+			vm.addBounceTwo = '' 
+			vm.addBounceThree = ''
 		}
 	}
 })()

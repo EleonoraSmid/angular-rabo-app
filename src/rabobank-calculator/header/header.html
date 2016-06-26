@@ -11,13 +11,13 @@
 	</div>
 	<div class="btn-group btn-group-justified" role="group" aria-label="..." >
 		<div class="btn-group" role="group" >
-			<button type="button" class="btn btn-default buttonClass" ng-mouseover="ctrl.mouseOver()" ng-link="['Calculator']" ng-click="ctrl.buttonClick()"><div ng-class="ctrl.addBounce">Calculator</div></button>
+			<button type="button" class="btn btn-default buttonClass" ng-mouseover="ctrl.mouseOver($event)" ng-link="['Calculator']" ng-click="ctrl.buttonClick()" ng-mouseleave="ctrl.mouseLeave()" id="buttonNavOne"><div ng-class="ctrl.addBounceOne">Calculator</div></button>
 		</div>
 		<div class="btn-group" role="group" >
-			<button type="button" class="btn btn-default buttonClass" ng-link="['Rente']" ng-click="ctrl.buttonClick()" ng-mouseover="ctrl.mouseOver()" ng-class="ctrl.addBounce">Actuele rente</button>
+			<button type="button" class="btn btn-default buttonClass" ng-link="['Rente']" ng-click="ctrl.buttonClick()" ng-mouseover="ctrl.mouseOver($event)" ng-mouseleave="ctrl.mouseLeave()" id="buttonNavTwo"><div ng-class="ctrl.addBouncTwo">Actuele rente</div></button>
 		</div>
 		<div class="btn-group" role="group" >
-			<button type="button" class="btn btn-default buttonClass" ng-link="['Voorwaarden']" ng-mouseover="ctrl.mouseOver()" ng-click="ctrl.buttonClick()" ng-class="ctrl.addBounce">Voorwaarden</button>
+			<button type="button" class="btn btn-default buttonClass" ng-link="['Voorwaarden']" ng-mouseover="ctrl.mouseOver($event)" ng-click="ctrl.buttonClick()" ng-mouseleave="ctrl.mouseLeave()" id="buttonNavThree"><div ng-class="ctrl.addBounceThree">Voorwaarden</div></button>
 		</div>
 	</div>
 </header>
