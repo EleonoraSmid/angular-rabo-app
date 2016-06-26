@@ -37,12 +37,21 @@
 				return true
 		}
 		}
+		vm.changeInput = function(bedrag){
+			if(bedrag < 0) {
+				vm.error = 'error'
+			} else {
+				vm.error = ''
+			}
+		}
 		vm.buttonClick = function(){
 			BerekenMaxHypoService.berekenMax(vm.bedrag1.value, vm.bedrag2.value)
 				.then(function successCallback(response) {
-					vm.maxBijlenenText = 'U kunt maximaal bijlenen: ';
-					vm.totaalBedrag = response.data.maxToLoan;
-					gezamelijkInkomen.setBedrag(vm.totaalBedrag);
+					if(response.data.maxToLoan > 0){
+						vm.maxBijlenenText = 'U kunt maximaal bijlenen: ';
+						vm.totaalBedrag = response.data.maxToLoan;
+						gezamelijkInkomen.setBedrag(vm.totaalBedrag);
+					}
 				}, function errorCallback(error) {
 					console.log(error);
 				});

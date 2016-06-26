@@ -35,7 +35,13 @@
 				};
 			}
 	    };
-
+		vm.changeInput = function(bedrag){
+			if(bedrag < 0) {
+				vm.error = 'error'
+			} else {
+				vm.error = ''
+			}
+		}
 		vm.checkDisabled = function(){
 			if(vm.bedragOne.value > 0){
 				return false

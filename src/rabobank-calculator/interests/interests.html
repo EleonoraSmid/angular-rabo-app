@@ -8,10 +8,10 @@
     <rzslider rz-slider-model="ctrl.bedragOne.value"
           rz-slider-options="ctrl.bedragOne.options"></rzslider>
   </div>
-  <input type="number" name="gezamelijkinkomen" ng-model="ctrl.bedragOne.value">
+  <input type="number" name="gezamelijkinkomen" ng-model="ctrl.bedragOne.value" ng-change="ctrl.changeInput(ctrl.bedragOne.value)">
   </div>
   <div class="form-group row">
-  <button type="submit" class="btn btn-default buttonClass" ng-disabled="ctrl.checkDisabled()">Bereken bruto maandlast</button>
+  <button type="submit" class="btn btn-default buttonClass" ng-disabled="ctrl.checkDisabled()" ng-class="ctrl.error">Bereken bruto maandlast</button>
   <p>{{ctrl.totalText}} {{ctrl.totaal  | currency:"€"}}</p>
   </div>
 </form>

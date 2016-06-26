@@ -1,4 +1,14 @@
-
+@media (min-width: 900px) {
+.imgHeaderLeft {
+	background-image: url('../img/rabobank-logo.png');
+	background-repeat: no-repeat;
+	height:120px;
+	width:100px;
+    background-size: 100% auto;
+    margin-left:10px;
+	margin-top: 0px;
+}
+}
 @media (max-width: 900px) {
 	 	.imgHeaderLeft {
 		background-image: url('../img/rabobank-logo-mobile.png');
@@ -15,34 +25,34 @@ label, button, div{
 	font-size: small;
 }
 .btn:focus {
- outline:0;
- background-color: #ffff!important;
+ 	outline:0;
+ 	background-color: #ffff!important;
 }
 .btn:active {
   outline:0;
- background-color: #ffff!important;
+ 	background-color: #ffff!important;
 }
 .btn:active {
- outline:0;
- background-color: #ffff!important;
+ 	outline:0;
+ 	background-color: #ffff!important;
 }
 .btn {
 	background-color: #ffff!important;
- border: none;
- border-bottom: 1px solid #ff0000;
+ 	border: none;
+ 	border-bottom: 1px solid #ff0000;
 }
 .buttonClass:hover {
- background-color: #ffff!important;
- border: none;
- border-bottom: 1px solid #6666ff;
+ 	background-color: #ffff!important;
+ 	border: none;
+ 	border-bottom: 1px solid #6666ff;
 }
 .btn:hover {
- background-color: white!important;
+ 	background-color: white!important;
 }
 .main-container {
- background-color:#f2f2f2;
- margin:-30px 60px 0px 60px;
- padding: 10px 60px 10px 60px;
+ 	background-color:#f2f2f2;
+ 	margin:-30px 60px 0px 60px;
+ 	padding: 10px 60px 10px 60px;
 }
 form > label {
 	margin-left:-15px;
@@ -52,17 +62,6 @@ form > label {
 }
 input:focus{
   box-shadow: 0 0 5px rgba(255, 153, 102, 1)!important;
-}
-@media (min-width: 900px) {
-.imgHeaderLeft {
-	background-image: url('../img/rabobank-logo.png');
-	background-repeat: no-repeat;
-	height:120px;
-	width:100px;
-    background-size: 100% auto;
-    margin-left:10px;
-	margin-top: 0px;
-}
 }
 .navJumbo {
 	padding-bottom:0px;
@@ -76,4 +75,7 @@ input:focus{
 }
 .activeThis{
 	color:black!important;
+}
+.error{
+	background-color:red!important;
 }

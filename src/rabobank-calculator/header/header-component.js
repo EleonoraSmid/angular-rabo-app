@@ -12,7 +12,6 @@
 			slideLeft.putClass('animated fadeInRight')
 		}
 		vm.mouseOver = function(event){
-			console.log(event.target.id)
 			bounce.putClass('animated bounce')
 			if(event.target.id === 'buttonNavOne') {
 				vm.addBounceOne = bounce.getClass()

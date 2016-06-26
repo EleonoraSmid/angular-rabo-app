@@ -6,7 +6,7 @@
     <rzslider rz-slider-model="ctrl.bedrag1.value"
           rz-slider-options="ctrl.bedrag1.options"></rzslider>
   </div>
-  <input type="number" name="persoon2" ng-model="ctrl.bedrag1.value">
+  <input type="number" name="persoon2" ng-model="ctrl.bedrag1.value" ng-change="ctrl.changeInput(ctrl.bedrag1.value)">
 </div>
 <div class="form-group row">
   <label for="persoon2">Partner inkomsten:</label>
@@ -14,12 +14,12 @@
     <rzslider rz-slider-model="ctrl.bedrag2.value"
           rz-slider-options="ctrl.bedrag2.options"></rzslider>
   </div>
-  <input type="number" name="persoon2" ng-model="ctrl.bedrag2.value">
+  <input type="number" name="persoon2" ng-model="ctrl.bedrag2.value" ng-change="ctrl.changeInput(ctrl.bedrag2.value)">
 </div>
   <div class="form-group row">
-  <button type="submit" class="btn btn-default buttonClass" ng-disabled="ctrl.checkDisabled()">Bereken maximale hypotheek</button>
+  <button type="submit" class="btn btn-default buttonClass" ng-disabled="ctrl.checkDisabled()" ng-class="ctrl.error">Bereken maximale hypotheek</button>
   </div>
-  <p>{{ctrl.maxBijlenenText }}{{ctrl.totaalBedrag | calculateEuro:'€':true}}</p>
+  <p ng-class="ctrl.hide">{{ctrl.maxBijlenenText }}{{ctrl.totaalBedrag | calculateEuro:'€':true}}</p>
 </form>
 </div>
 <!--
