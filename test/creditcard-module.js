@@ -6,29 +6,34 @@ angular.module('creditcard-filter-module', [])
         	if(!isNaN(number)) {
         		console.log(number)
         		number = number.toString()
-        		if(number.length > 13 && number.length < 17){
-        			if(number[0] === '4'){
+            	function getCardType(numbers) {
+        			if(numbers[0] === '4'){
         				creditcardType = 'Visa'
-        			} else if(number[0] === '3' && number[1] === '7' | number[1] === '4') {
+        			} else if(numbers[0] === '3' && numbers[1] === '7' | numbers[1] === '4') {
         				creditcardType = 'American Express'
-        			} else if(number[0] === '5') {
+        			} else if(numbers[0] === '5') {
         				creditcardType = 'Mastercard'
         			} else {
         				return notAnumber
         			}
-            		var newString = ''
-            		for(var i = 0; i < number.length - 3; i++){
+            	}
+        		function convertToStars(numbers) {
+        			if(numbers.length > 13 && numbers.length < 17){
+            			var newString = ''
+            		for(var i = 0; i < numbers.length - 3; i++){
             			newString = newString.concat('*')
             		}
-            		number = number.slice((number.length - 4), number.length )
-            		newString = newString.concat(number)
+            		numbers = numbers.slice((numbers.length - 4), numbers.length )
+            		newString = newString.concat(numbers)
             		number = newString + ' (' + creditcardType + ')'
-            		return number 
-           		 }
+            		return numbers
+        			}
+        		}
+        		getCardType(number)
+        		convertToStars(number)
+        		return number
            	} else {
            		return notAnumber
            	}
         };
     });
-
-    // .replace(/\B(?=(\d{3})+(?!\d))/g, "-")
