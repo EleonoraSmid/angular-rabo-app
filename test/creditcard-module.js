@@ -1,7 +1,7 @@
 angular.module('creditcard-filter-module', [])
     .filter('creditcard-filter', function () {
         return function (number) {
-        	var notAnumber = ' '
+        	var notAnumber = ''
         	var creditcardType
         	if(!isNaN(number)) {
         		console.log(number)
