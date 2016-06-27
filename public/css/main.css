@@ -41,13 +41,10 @@ label, button, div{
  	border: none;
  	border-bottom: 1px solid #ff0000;
 }
-.buttonClass:hover {
+.btn:hover {
  	background-color: #ffff!important;
  	border: none;
  	border-bottom: 1px solid #6666ff;
-}
-.btn:hover {
- 	background-color: white!important;
 }
 .main-container {
  	background-color:#f2f2f2;
