@@ -1,6 +1,7 @@
 <div class="row main-container" ng-class="ctrl.addClass">
 <form name="calculatorForm" ng-submit="ctrl.buttonClick()" >
 <div class="form-group row">
+  <h2>{{ctrl.error}}</h2>
   <label for="persoon1">Uw inkomsten:</label>
   <div class="form-group">
     <rzslider rz-slider-model="ctrl.bedrag1.value"

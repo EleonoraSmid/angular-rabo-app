@@ -46,14 +46,18 @@
 		}
 		vm.buttonClick = function(){
 			BerekenMaxHypoService.berekenMax(vm.bedrag1.value, vm.bedrag2.value)
-				.then(function successCallback(response) {
+				.then(function(response) {
 					if(response.data.maxToLoan > 0){
 						vm.maxBijlenenText = 'U kunt maximaal bijlenen: ';
 						vm.totaalBedrag = response.data.maxToLoan;
 						gezamelijkInkomen.setBedrag(vm.totaalBedrag);
 					}
-				}, function errorCallback(error) {
+				}).catch(function(error) {
 					console.log(error);
+					vm.checkDisabled = function() {
+						return true
+					}
+					vm.error = "Whoops, er is iets stuk."
 				});
 			};
 		};
